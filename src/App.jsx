@@ -30,8 +30,8 @@ const App = () => {
     passwordGenerator();
   }, [length, numberAllowed, characterAllowed, passwordGenerator]);
   return (
-    <div className="bg-sky-200 p-20">
-      <div className="h-screen w-7/12 bg-sky-200 flex flex-col content-center gap-3 m-auto">
+    <div className="bg-gray-300 ">
+      <div className="h-screen w-7/12 flex flex-col mx-auto p-12 rounded-lg content-center gap-3 m-auto">
         <h1 className="text-3xl text-black  text-center mb-5 ">
           Password Generator
         </h1>
@@ -41,7 +41,7 @@ const App = () => {
             ref={passwordRef}
             onChange={(e) => setPassword(e.target.value)}
             type="text"
-            className="h-12 w-90 rounded-sm outline-none  text-yellow-400 text-4xl pb-2 selection:bg-green-700 selection:text-sky-400"
+            className="h-12 w-90 p-3 rounded-lg outline-none  text-gray-400 text-4xl  selection:bg-blue-500 selection:text-white"
           />
           <span>
             <button
@@ -52,15 +52,15 @@ const App = () => {
             </button>
           </span>
         </div>
-        <div className="flex justify-evenly w-full text-yellow-700 text-lg">
+        <div className="flex justify-evenly  w-full  text-gray-700 text-lg">
           <input
             type="range"
             name="range"
             min={8}
-            max={50}
+            max={30}
             value={length}
             onChange={(e) => setLength(e.target.value)}
-            className="w-3/12 "
+            className="w-3/12"
           />
           <span className="text-black-400">Lenght: {length}</span>
           <div className="flex gap-2 content-center">
